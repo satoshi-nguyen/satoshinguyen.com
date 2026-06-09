@@ -1,7 +1,7 @@
 # satoshinguyen.com
 
 Trang cá nhân + nhà trực tuyến cho sách **Python cho AI Engineering** (tác giả **Nguyễn Phương Ngọc**).
-Static site bằng **Astro**, deploy trên **Cloudflare Pages**.
+Static site bằng **Astro**, deploy trên **Cloudflare Workers** (static assets).
 
 ---
 
@@ -30,12 +30,12 @@ npm run build     # -> dist/  (gồm cả dist/_redirects)
 npm run preview   # xem thử bản build
 ```
 
-## Deploy (Cloudflare Pages)
+## Deploy (Cloudflare Workers — static assets)
 
 1. Đẩy repo lên GitHub (handle `satoshi-nguyen`).
-2. Cloudflare Pages → Create project → kết nối repo.
+2. Cloudflare → **Workers & Pages** → Create → **Connect to Git** (kết nối repo; mỗi lần push `main` → auto-deploy).
    - **Build command:** `npm run build`
-   - **Output directory:** `dist`
+   - **Static assets directory:** `dist`
 3. Custom domain: gắn **apex `satoshinguyen.com` (canonical)** + `www`. Chờ SSL active.
 4. Tại Cloudflare, thêm **Redirect Rule**: `www.satoshinguyen.com/*` → `https://satoshinguyen.com/${1}` (301).
    *(www → apex; KHÔNG đặt trong repo này.)*

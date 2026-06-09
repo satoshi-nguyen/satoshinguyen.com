@@ -3,7 +3,7 @@
 Hướng dẫn cho Claude Code khi làm việc trên repo này. **Đọc kỹ trước khi sửa bất cứ thứ gì.**
 
 ## Repo này là gì
-Static site (**Astro 6**, output `static`) cho **satoshinguyen.com** — trang cá nhân + nhà trực tuyến của sách *"Python cho AI Engineering"* (tác giả **Nguyễn Phương Ngọc**). Deploy trên **Cloudflare Pages**.
+Static site (**Astro 6**, output `static`) cho **satoshinguyen.com** — trang cá nhân + nhà trực tuyến của sách *"Python cho AI Engineering"* (tác giả **Nguyễn Phương Ngọc**). Deploy trên **Cloudflare Workers** (static assets).
 Đây là repo **WEBSITE** — KHÁC repo mã nguồn của sách (`satoshi-nguyen/...`, MIT).
 
 ---
@@ -30,7 +30,7 @@ npm run dev       # http://localhost:4321
 npm run build     # -> dist/ (gồm dist/_redirects)
 npm run preview
 ```
-⚠️ Cú **301 chỉ chạy trên Cloudflare Pages** (tính năng biên) — KHÔNG test được bằng server tĩnh cục bộ (`/b/pyai1` sẽ trả 404 cục bộ, đúng như dự kiến). Test thật **sau deploy**: `curl -sIL https://satoshinguyen.com/b/pyai1`.
+⚠️ Cú **301 chỉ chạy trên Cloudflare Workers (static-assets)** (tính năng biên) — KHÔNG test được bằng server tĩnh cục bộ (`/b/pyai1` sẽ trả 404 cục bộ, đúng như dự kiến). Test thật **sau deploy**: `curl -sIL https://satoshinguyen.com/b/pyai1`.
 
 ## Cấu trúc
 ```
@@ -73,7 +73,7 @@ src/pages/books/python-for-ai-engineering-volume-1/     # landing Cuốn 1  [slu
 - **Tác giả = thẩm quyền cuối** mọi câu chữ/danh tính/thứ public. Claude Code soạn + trình, **KHÔNG tự quyết thay**.
 
 ## Roadmap (đang mở)
-- **A (xong):** redirect never-404 + landing Cuốn 1 (tên thật). Còn lại: **deploy thật** — delegate NS Namecheap→Cloudflare · Pages (build `npm run build`, output `dist`) · gắn **apex canonical** + `www` · Redirect Rule `www→apex` · test 301 + quét QR.
+- **A (xong):** redirect never-404 + landing Cuốn 1 (tên thật). Còn lại: **deploy thật** — delegate NS Namecheap→Cloudflare · Workers static-assets (build `npm run build`, static assets `dist`) · gắn **apex canonical** + `www` · Redirect Rule `www→apex` · test 301 + quét QR.
 - **B/C:** đổi nav `Cuốn 1`→`Sách` + thêm `Poker · Projects · Viết`; Home tái định vị **đa-mảng**; dựng shell `/books` (kệ) · `/poker` · `/projects` · `/blog`. **Additive — KHÔNG đụng redirect/slug Cuốn 1.**
 - **D:** đổ nội dung tác giả cấp (sách poker · projects + link thật · live tour) theo minimal-diff.
 

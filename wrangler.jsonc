@@ -1,0 +1,15 @@
+{
+  // satoshinguyen.com — static-assets-only Worker (Astro `output: static`).
+  // Pins the deploy to PURE static assets so Cloudflare does NOT auto-provision
+  // an Astro "SESSION" KV namespace (withastro/astro#15802). A static site uses
+  // no bindings — there is intentionally NO "main" and NO "kv_namespaces" here.
+  //
+  // Workers static-assets natively honors dist/_redirects (incl. the never-404
+  // /b/pyai1 301 → RÀNG BUỘC SỐ 1) and dist/_headers — same mechanism as today.
+  //
+  // ⚠️ "name" MUST match the existing Worker, or `wrangler deploy` targets a
+  //    different Worker and the custom domain stops updating. Do not rename.
+  "name": "satoshinguyen-com",
+  "compatibility_date": "2026-06-01",
+  "assets": { "directory": "./dist" }
+}

@@ -11,3 +11,6 @@ node_modules/
 .DS_Store
 # author delivery archives (zip drops — never commit)
 archives/
+reference/
+# blog drafts (placeholder versions — never commit; published copy lives in src/content/blog/)
+drafts/

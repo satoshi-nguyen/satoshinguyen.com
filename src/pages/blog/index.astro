@@ -1,5 +1,12 @@
 ---
 import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const tags = [...new Set(posts.flatMap((p) => p.data.tags))];
+const fmt = (d: Date) =>
+  d.toLocaleDateString('vi-VN', { year: 'numeric', month: '2-digit', day: '2-digit' });
 ---
 <Base
   title="Viết — Nguyễn Phương Ngọc"
@@ -10,21 +17,24 @@ import Base from '../../layouts/Base.astro';
     <h1 style="font-size:clamp(34px,5vw,52px); margin:12px 0 4px">Viết</h1>
     <p class="lead">Một nơi cho cả hai mảng — bài kỹ thuật AI và ghi chép poker — phân loại bằng thẻ.</p>
 
-    <div class="chip-list">
-      <span class="chip">AI</span>
-      <span class="chip">RAG</span>
-      <span class="chip">Observability</span>
-      <span class="chip">Poker</span>
-      <span class="chip">Lý thuyết trò chơi</span>
-    </div>
+    {tags.length > 0 && (
+      <div class="chip-list">
+        {tags.map((t) => <span class="chip">{t}</span>)}
+      </div>
+    )}
 
-    <div class="posts" style="margin-top:26px">
-      <div class="post"><span class="pdate">đang chuẩn bị</span><span class="ptitle">Vì sao tôi dạy “quan sát” trước khi dạy “tối ưu”</span><span class="ptag">AI</span></div>
-      <div class="post"><span class="pdate">đang chuẩn bị</span><span class="ptitle">Cú pháp đúng vẫn sai: lỗi robustness hay gặp khi gọi LLM</span><span class="ptag">AI</span></div>
-      <div class="post"><span class="pdate">đang chuẩn bị</span><span class="ptitle">RAG trên tài liệu tiếng Việt: chỗ dễ vỡ khi trích xuất</span><span class="ptag">RAG</span></div>
-      <div class="post"><span class="pdate">đang chuẩn bị</span><span class="ptitle">Ra quyết định dưới bất định: poker dạy được gì cho kỹ thuật</span><span class="ptag">Poker</span></div>
-    </div>
-
-    <p class="note" style="margin-top:22px">Tiêu đề ở trên là chỗ giữ chỗ (chưa xuất bản). Nội dung bài sẽ thêm sau.</p>
+    {posts.length > 0 ? (
+      <div class="posts" style="margin-top:26px">
+        {posts.map((p) => (
+          <a class="post" href={`/blog/${p.id}/`} style="text-decoration:none">
+            <span class="pdate">{fmt(p.data.date)}</span>
+            <span class="ptitle">{p.data.title}</span>
+            <span class="ptag">{p.data.tags.join(' · ')}</span>
+          </a>
+        ))}
+      </div>
+    ) : (
+      <p class="note" style="margin-top:24px">Bài viết đang được chuẩn bị.</p>
+    )}
   </section>
 </Base>

@@ -1,0 +1,70 @@
+---
+import Base from '../../../layouts/Base.astro';
+const UPDATES = '/books/python-for-ai-engineering-volume-1/updates/';
+---
+<Base
+  title="Python cho AI Engineering — Nguyễn Phương Ngọc"
+  description="Cuốn 1 · Python cho AI Engineering — cây cầu thực hành đưa sinh viên kỹ thuật Việt Nam từ Python đến ứng dụng LLM, RAG và Agent, qua năm dự án bối cảnh Việt Nam và mã nguồn chạy được."
+>
+  <section class="wrap book-hero">
+    <div>
+      <div class="eyebrow">Cuốn 1 · Sách thực hành</div>
+      <h1 class="book-title">Python cho AI Engineering</h1>
+      <div class="book-sub">Từ lập trình cơ bản đến xây dựng ứng dụng LLM, RAG và Agent</div>
+      <div class="status-pill"><span class="pulse"></span> Sắp ra mắt · đang hoàn thiện bản thảo</div>
+      <p class="lead">Một <em>cây cầu thực hành</em> đưa sinh viên kỹ thuật Việt Nam (năm 2–4, đã biết lập trình cơ bản) từ nền tảng Python đến tự xây ứng dụng AI hiện đại — LLM, RAG, Agent — qua năm dự án bối cảnh Việt Nam và mã nguồn chạy được, có phiên bản, vừa với gói API miễn phí.</p>
+      <div class="arc">Mạch xuyên suốt: <b>xây</b> → <b>đánh giá</b> → <b>quan sát</b></div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href={UPDATES}>Phụ bản trực tuyến</a>
+        <a class="btn btn-ghost" href="#" data-link="repo">Mã nguồn (GitHub)</a>
+      </div>
+    </div>
+    <div class="cover" aria-hidden="true">
+      <div class="cv-top">
+        <div class="cv-eyebrow">Cuốn 1</div>
+        <div class="cv-title">Python cho AI Engineering</div>
+        <div class="cv-sub">LLM · RAG · Agent · Observability</div>
+      </div>
+      <svg class="cv-bridge" viewBox="0 0 200 60" preserveAspectRatio="none"><line x1="0" y1="46" x2="200" y2="46" stroke="#9FC6E8" stroke-opacity=".5"/><line x1="74" y1="46" x2="74" y2="12" stroke="#EAF7FC" stroke-opacity=".75"/><g stroke="#5ED3F0" stroke-opacity=".75" stroke-width=".9"><line x1="74" y1="13" x2="20" y2="46"/><line x1="74" y1="13" x2="48" y2="46"/><line x1="74" y1="13" x2="110" y2="46"/><line x1="74" y1="13" x2="150" y2="46"/><line x1="74" y1="13" x2="186" y2="46"/></g></svg>
+      <div class="cv-author">Nguyễn Phương Ngọc</div>
+    </div>
+  </section>
+
+  <section class="block wrap">
+    <div class="eyebrow">Năm dự án — năm thước đo</div>
+    <h2 style="margin:12px 0 4px">Học bằng cách xây thật, đánh giá thật</h2>
+    <p class="lead">Mỗi dự án mở ra một kết quả chạy được, rồi mới mổ xẻ cơ chế. Mỗi dự án đi kèm một cách <em>đánh giá</em> cụ thể — vì làm được chưa đủ, phải đo được.</p>
+    <div class="proj-grid">
+      <div class="proj"><div class="num">01</div><h3>Phân loại bình luận thương mại điện tử</h3><p>Mô hình hoá một bài toán quen thuộc với dữ liệu tiếng Việt.</p><span class="metric"><span class="mlabel">Đánh giá:</span> Precision / Recall / F1</span></div>
+      <div class="proj"><div class="num">02</div><h3>Tìm kiếm ngữ nghĩa</h3><p>Từ embedding đến truy hồi theo ý nghĩa thay vì từ khoá.</p><span class="metric"><span class="mlabel">Đánh giá:</span> recall@k</span></div>
+      <div class="proj"><div class="num">03</div><h3>RAG hỏi đáp quy chế Việt Nam</h3><p>Ghép truy hồi với mô hình ngôn ngữ để trả lời bám tài liệu.</p><span class="metric"><span class="mlabel">Đánh giá:</span> groundedness</span></div>
+      <div class="proj"><div class="num">04</div><h3>Agent tra cứu</h3><p>Để mô hình tự lập kế hoạch và gọi công cụ hoàn thành nhiệm vụ.</p><span class="metric"><span class="mlabel">Đánh giá:</span> mức hoàn thành nhiệm vụ</span></div>
+      <div class="proj"><div class="num">05</div><h3>Dashboard quan sát</h3><p>Nhìn xuyên hệ thống: vết gọi, chi phí, độ trễ, chất lượng trả lời.</p><span class="metric"><span class="mlabel">Đánh giá:</span> chỉ số tổng hợp</span></div>
+      <div class="proj" style="background:linear-gradient(160deg,var(--navy-800),var(--navy-850)); border-color:var(--line-strong)"><div class="num" style="color:var(--cyan)">↳</div><h3>Vừa với gói miễn phí</h3><p>Mọi bài tập chạy được trong hạn mức API miễn phí — kèm cách xử lý hết hạn ngạch, retry và backoff như một phần nội dung.</p><span class="metric" style="color:var(--amber); background:rgba(232,181,99,.1); border-color:rgba(232,181,99,.25)">Thiết kế cho người mới học</span></div>
+    </div>
+  </section>
+
+  <section class="block wrap">
+    <div class="supp">
+      <div class="badge">Phụ bản trực tuyến · /updates</div>
+      <h3>Lớp “dễ-lạc-hậu” — luôn cập nhật, tổ chức theo chương</h3>
+      <p>Bản in giữ phần nguyên lý bền vững. Những thứ thay đổi nhanh — tên model, lệnh cài đặt, cú pháp SDK, giá API, các bước triển khai — sống ở đây, kèm ngày cập nhật, sắp theo từng chương. Khi gặp đoạn được đánh dấu trong sách, bạn kiểm tài liệu chính thức hiện hành của nhà cung cấp và đối chiếu phụ bản này.</p>
+      <div class="upd-rows">
+        <div class="upd"><span class="ch">Chương 6 — Gọi LLM</span><span class="chtag">tên model · SDK</span><span class="when">đang chuẩn bị</span></div>
+        <div class="upd"><span class="ch">Chương 9 — RAG đầu–cuối</span><span class="chtag">thư viện · giá</span><span class="when">đang chuẩn bị</span></div>
+        <div class="upd"><span class="ch">Chương 11 — Quan sát hệ thống</span><span class="chtag">công cụ · deploy</span><span class="when">đang chuẩn bị</span></div>
+      </div>
+      <div class="cta-row" style="margin-top:22px"><a class="btn btn-ghost" href={UPDATES}>Mở phụ bản →</a></div>
+    </div>
+  </section>
+
+  <section class="block wrap">
+    <div class="eyebrow">Tài nguyên đi kèm</div>
+    <h2 style="margin:12px 0 4px">Mọi thứ để bạn chạy lại được</h2>
+    <div class="res-grid">
+      <div class="res"><div class="ricon"><svg width="22" height="22" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 014 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></div><h4>Mã nguồn</h4><p>Toàn bộ ví dụ và dự án, có phiên bản, giấy phép MIT cho phần mã.</p></div>
+      <div class="res"><div class="ricon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M9 9l2 2-2 2M14 15h2"/></svg></div><h4>Errata</h4><p>Chỗ sai được ghi nhận công khai và sửa, kèm ngày — sách sống thì sách thật.</p></div>
+      <div class="res"><div class="ricon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div><h4>Dataset</h4><p>Dữ liệu mẫu cho các dự án, với điều khoản dùng riêng (khác giấy phép mã).</p></div>
+    </div>
+  </section>
+</Base>

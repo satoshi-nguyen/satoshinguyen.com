@@ -1,0 +1,8 @@
+# ============================================================================
+#  satoshinguyen.com — Cloudflare Pages redirects
+#  ⚠️  RÀNG BUỘC SỐ 1 — KHÔNG ĐƯỢC XOÁ / ĐỔI DÒNG DƯỚI ĐÂY.
+#  URL này được IN TRONG SÁCH GIẤY + mã hoá trong QR. Nếu nó 404 hoặc đổi đích,
+#  link trong mọi bản in đã phát hành sẽ chết và KHÔNG sửa lại được.
+#  Đích /books/python-for-ai-engineering-volume-1 là slug ĐÔNG CỨNG, không bao giờ xoá.
+# ============================================================================
+/b/pyai1    /books/python-for-ai-engineering-volume-1    301

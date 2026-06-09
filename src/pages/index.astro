@@ -1,0 +1,89 @@
+---
+import Base from '../layouts/Base.astro';
+const BOOK = '/books/python-for-ai-engineering-volume-1/';
+---
+<Base
+  title="Nguyễn Phương Ngọc — kỹ sư phần mềm · Applied AI"
+  description="Nguyễn Phương Ngọc — kỹ sư phần mềm, đang học Thạc sĩ Applied AI, quan tâm AI observability. Tác giả “Python cho AI Engineering” — cây cầu thực hành đưa sinh viên kỹ thuật Việt Nam từ Python đến ứng dụng LLM, RAG và Agent."
+>
+  <header class="hero">
+    <div class="hero-bridge" aria-hidden="true">
+      <svg viewBox="0 0 1200 300" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="cab" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#5ED3F0" stop-opacity=".9"/>
+            <stop offset="1" stop-color="#5ED3F0" stop-opacity=".25"/>
+          </linearGradient>
+          <filter id="glow"><feGaussianBlur stdDeviation="1.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        </defs>
+        <line x1="0" y1="252" x2="1200" y2="252" stroke="#9FC6E8" stroke-opacity=".5" stroke-width="2"/>
+        <line x1="0" y1="258" x2="1200" y2="258" stroke="#9FC6E8" stroke-opacity=".18" stroke-width="1"/>
+        <g filter="url(#glow)">
+          <line x1="380" y1="252" x2="380" y2="60" stroke="#EAF7FC" stroke-opacity=".7" stroke-width="2.5"/>
+          <g stroke="url(#cab)" stroke-width="1.3">
+            <line x1="380" y1="64" x2="150" y2="252"/><line x1="380" y1="64" x2="225" y2="252"/>
+            <line x1="380" y1="64" x2="300" y2="252"/><line x1="380" y1="64" x2="455" y2="252"/>
+            <line x1="380" y1="64" x2="540" y2="252"/><line x1="380" y1="64" x2="625" y2="252"/>
+          </g>
+        </g>
+        <g filter="url(#glow)">
+          <line x1="840" y1="252" x2="840" y2="84" stroke="#EAF7FC" stroke-opacity=".55" stroke-width="2.2"/>
+          <g stroke="url(#cab)" stroke-width="1.2" stroke-opacity=".75">
+            <line x1="840" y1="88" x2="660" y2="252"/><line x1="840" y1="88" x2="730" y2="252"/>
+            <line x1="840" y1="88" x2="785" y2="252"/><line x1="840" y1="88" x2="910" y2="252"/>
+            <line x1="840" y1="88" x2="985" y2="252"/><line x1="840" y1="88" x2="1060" y2="252"/>
+          </g>
+        </g>
+        <circle cx="380" cy="60" r="3" fill="#5ED3F0"/><circle cx="840" cy="84" r="2.6" fill="#5ED3F0"/>
+      </svg>
+    </div>
+    <div class="wrap hero-content">
+      <div class="kicker reveal" style="animation-delay:.05s" data-i18n="hero.kicker">Kỹ sư phần mềm · đang học Thạc sĩ Applied AI</div>
+      <h1 class="reveal" style="animation-delay:.13s"><span class="name-grad">Nguyễn Phương Ngọc</span></h1>
+      <div class="role reveal" style="animation-delay:.2s" data-i18n="hero.role">Xây hệ thống AI thực tế · quan tâm tới việc quan sát chúng (AI observability)</div>
+      <p class="bio reveal" style="animation-delay:.28s">Tôi xây ứng dụng AI và quan tâm tới việc <em>quan sát</em> chúng — vì sao mô hình trả lời thế này, hỏng ở đâu, tốn bao nhiêu. Trang này là nơi tôi ghi lại việc đang làm, hướng nghiên cứu, và cuốn sách tôi đang viết để giúp sinh viên kỹ thuật Việt Nam tự xây ứng dụng AI hiện đại.</p>
+      <p class="draftline reveal" style="animation-delay:.34s">Trước đây phát triển sản phẩm tại Cốc Cốc · học Kỹ thuật Máy tính tại NTU Singapore.</p>
+      <div class="links reveal" style="animation-delay:.42s">
+        <a href="#" data-link="github">GitHub</a><span class="dot">·</span>
+        <a href="#" data-link="scholar">Google Scholar</a><span class="dot">·</span>
+        <a href="#" data-link="linkedin">LinkedIn</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="block wrap">
+    <div class="two">
+      <div>
+        <div class="eyebrow">Việc đang làm</div>
+        <h2 style="margin-top:12px">Cây cầu giữa nền tảng và ứng dụng</h2>
+        <p class="lead">Sinh viên kỹ thuật ở Việt Nam thường vững nền tảng nhưng thiếu một lối đi liền mạch tới ứng dụng AI hiện đại. Tôi viết cuốn sách này như một <em>cây cầu thực hành</em>: từ Python tới LLM, RAG và Agent — bằng mã nguồn chạy được, dự án bối cảnh Việt Nam, và một kỷ luật xuyên suốt là <b style="color:var(--cyan);font-weight:600">xây → đánh giá → quan sát</b>.</p>
+      </div>
+      <div>
+        <div class="eyebrow">Quan tâm nghiên cứu</div>
+        <h2 style="margin-top:12px">AI observability</h2>
+        <p class="lead">Khi hệ thống dựa trên mô hình ngôn ngữ đi vào thực tế, câu hỏi khó không còn là “chạy được không” mà là “vì sao nó trả lời thế, hỏng ở đâu, chi phí bao nhiêu, có bám tài liệu không”. Đây là hướng tôi đang theo đuổi và muốn đưa vào tay người mới học sớm nhất có thể.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block wrap">
+    <div class="eyebrow">Cuốn sách</div>
+    <h2 style="margin:12px 0 22px">Python cho AI Engineering</h2>
+    <a class="bookcard" href={BOOK}>
+      <div class="cover" aria-hidden="true">
+        <div class="cv-top">
+          <div class="cv-eyebrow">Cuốn 1</div>
+          <div class="cv-title">Python cho AI Engineering</div>
+          <div class="cv-sub">LLM · RAG · Agent</div>
+        </div>
+        <svg class="cv-bridge" viewBox="0 0 200 60" preserveAspectRatio="none"><line x1="0" y1="46" x2="200" y2="46" stroke="#9FC6E8" stroke-opacity=".5"/><line x1="70" y1="46" x2="70" y2="14" stroke="#EAF7FC" stroke-opacity=".7"/><g stroke="#5ED3F0" stroke-opacity=".7" stroke-width=".8"><line x1="70" y1="15" x2="22" y2="46"/><line x1="70" y1="15" x2="46" y2="46"/><line x1="70" y1="15" x2="104" y2="46"/><line x1="70" y1="15" x2="140" y2="46"/></g></svg>
+        <div class="cv-author">Nguyễn Phương Ngọc</div>
+      </div>
+      <div>
+        <h2 style="font-size:23px">Từ lập trình cơ bản đến ứng dụng LLM, RAG và Agent</h2>
+        <p class="lead" style="margin-top:10px; font-size:16.5px">Dành cho sinh viên kỹ thuật năm 2–4 đã biết lập trình cơ bản. Năm dự án bối cảnh Việt Nam, mã nguồn có phiên bản, vừa với gói API miễn phí.</p>
+        <div class="links" style="margin-top:16px"><span style="color:var(--cyan); border-bottom:1px solid var(--cyan); padding-bottom:2px; font-weight:500; font-size:14.5px">Xem chi tiết Cuốn 1 →</span></div>
+      </div>
+    </a>
+  </section>
+</Base>

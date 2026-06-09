@@ -1,0 +1,25 @@
+---
+import Base from '../../../../layouts/Base.astro';
+const chapters = [
+  'Chương 1', 'Chương 2', 'Chương 3', 'Chương 4', 'Chương 5', 'Chương 6',
+  'Chương 7', 'Chương 8', 'Chương 9', 'Chương 10', 'Chương 11',
+];
+---
+<Base
+  title="Phụ bản trực tuyến — Python cho AI Engineering"
+  description="Phụ bản trực tuyến cho Cuốn 1: tên model, lệnh cài đặt, cú pháp SDK, giá API, các bước triển khai — cập nhật theo chương."
+>
+  <section class="block wrap" style="border-top:none; padding-top:72px">
+    <div class="eyebrow">Phụ bản trực tuyến · Cuốn 1</div>
+    <h1 style="font-size:clamp(30px,4vw,46px); margin:12px 0 0">Lớp “dễ-lạc-hậu”, cập nhật theo chương</h1>
+    <div class="prose">
+      <p>Bản in giữ phần nguyên lý bền vững. Những thứ thay đổi nhanh — <strong style="color:var(--cyan);font-weight:600">tên model · lệnh cài đặt · cú pháp SDK · giá API · các bước triển khai</strong> — sống ở đây, kèm ngày cập nhật, sắp theo từng chương.</p>
+      <p>Khi gặp một đoạn được đánh dấu trong sách, hãy kiểm tài liệu chính thức hiện hành của nhà cung cấp và đối chiếu trang phụ bản tương ứng bên dưới.</p>
+    </div>
+    <div class="chip-list">
+      {chapters.map((c) => (
+        <span class="chip">{c}<span class="s">đang chuẩn bị</span></span>
+      ))}
+    </div>
+  </section>
+</Base>

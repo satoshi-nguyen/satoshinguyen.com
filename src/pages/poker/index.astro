@@ -1,9 +1,10 @@
 ---
 import Base from '../../layouts/Base.astro';
+const HENDON = 'https://pokerdb.thehendonmob.com/player.php?a=r&n=964779';
 ---
 <Base
   title="Poker — Nguyễn Phương Ngọc"
-  description="Poker, lý thuyết trò chơi và trải nghiệm giải đấu — dưới tên Satoshi Nguyen. Ghi chép về tư duy và ra quyết định dưới bất định."
+  description="Poker, lý thuyết trò chơi và trải nghiệm giải đấu live — dưới tên Satoshi Nguyen. Ghi chép về tư duy và ra quyết định dưới bất định."
 >
   <section class="block wrap" style="border-top:none; padding-top:72px">
     <div class="eyebrow">Poker · dưới tên Satoshi Nguyen</div>
@@ -13,11 +14,10 @@ import Base from '../../layouts/Base.astro';
 
   <section class="block wrap">
     <div class="eyebrow">Giải đấu · Live tour / festival</div>
-    <h2 style="margin:12px 0 4px">Trải nghiệm giải đấu</h2>
-    <p class="lead">Nhật ký các giải đã chơi — đang chờ tác giả cung cấp danh sách (giải · thời gian · ghi chú). Không hiển thị kết quả khi chưa được xác nhận.</p>
-    <div class="upd-rows" style="margin-top:18px">
-      <div class="upd"><span class="ch">Giải / festival</span><span class="chtag">live</span><span class="when">chờ tác giả</span></div>
-      <div class="upd"><span class="ch">Giải / festival</span><span class="chtag">live</span><span class="when">chờ tác giả</span></div>
+    <h2 style="margin:12px 0 4px">Thành tích giải đấu</h2>
+    <p class="lead">Kết quả các giải live được ghi nhận công khai trên The Hendon Mob — cơ sở dữ liệu giải đấu poker.</p>
+    <div class="cta-row" style="margin-top:18px">
+      <a class="btn btn-ghost" href={HENDON} target="_blank" rel="noopener">Xem hồ sơ The Hendon Mob →</a>
     </div>
   </section>
 
@@ -26,7 +26,7 @@ import Base from '../../layouts/Base.astro';
       <a class="res" href="/books/">
         <div class="ricon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h11a3 3 0 013 3v13a2 2 0 00-2-2H4z"/></svg></div>
         <h4>Sách poker</h4>
-        <p>Sách poker (tên &amp; trạng thái đang chờ xác nhận) nằm chung ở kệ Sách.</p>
+        <p>Hai cuốn đang viết — <em>Giải mã MTT</em> (GTO) và <em>Mental OS for Poker</em> — ở kệ Sách.</p>
         <span class="metric" style="margin-top:4px">Tới kệ Sách →</span>
       </a>
       <a class="res" href="/blog/">

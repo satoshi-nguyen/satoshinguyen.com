@@ -1,10 +1,12 @@
 ---
 import Base from '../../layouts/Base.astro';
 const BOOK = '/books/python-for-ai-engineering-volume-1/';
+const MTT = '/books/giai-ma-mtt/';
+const MENTAL = '/books/mental-os-for-poker/';
 ---
 <Base
   title="Sách — Nguyễn Phương Ngọc"
-  description="Kệ sách của Nguyễn Phương Ngọc: sách về AI engineering và sách poker."
+  description="Kệ sách: sách AI engineering (Nguyễn Phương Ngọc) và sách poker (Satoshi Nguyen)."
 >
   <section class="block wrap" style="border-top:none; padding-top:72px">
     <div class="eyebrow">Kệ sách</div>
@@ -12,6 +14,7 @@ const BOOK = '/books/python-for-ai-engineering-volume-1/';
     <p class="lead">Sách thực hành về AI engineering, và sách poker (dưới tên Satoshi Nguyen).</p>
 
     <div style="display:flex; flex-direction:column; gap:18px; margin-top:30px">
+      <!-- Cuốn 1 — AI -->
       <a class="bookcard" href={BOOK}>
         <div class="cover" aria-hidden="true">
           <div class="cv-top">
@@ -30,22 +33,43 @@ const BOOK = '/books/python-for-ai-engineering-volume-1/';
         </div>
       </a>
 
-      <div class="bookcard" style="cursor:default; opacity:.92">
+      <!-- Giải mã MTT — poker -->
+      <a class="bookcard" href={MTT}>
         <div class="cover" aria-hidden="true" style="background:linear-gradient(160deg,#14213f,#0c1734)">
           <div class="cv-top">
             <div class="cv-eyebrow" style="color:var(--amber)">Poker</div>
-            <div class="cv-title" style="color:var(--dim)">Đang cập nhật</div>
-            <div class="cv-sub">Satoshi Nguyen</div>
+            <div class="cv-title">Giải mã MTT</div>
+            <div class="cv-sub">GTO for Poker Tournament</div>
           </div>
-          <div class="cv-author" style="color:var(--dim)">Satoshi Nguyen</div>
+          <div style="position:absolute; left:0; right:0; bottom:26px; text-align:center; color:var(--dim); font-size:13px; letter-spacing:6px; opacity:.8">♠ ♥ ♦ ♣</div>
+          <div class="cv-author">Satoshi Nguyen</div>
         </div>
         <div>
-          <div class="eyebrow" style="color:var(--amber)">Poker</div>
-          <h2 style="font-size:23px; margin-top:6px; color:var(--dim)">Sách poker</h2>
-          <p class="lead" style="margin-top:8px; font-size:16.5px">Tên sách, trạng thái và đường đọc/mua đang chờ tác giả xác nhận — sẽ cập nhật tại đây.</p>
-          <div class="status-pill" style="margin-top:12px">Chờ tác giả</div>
+          <div class="eyebrow" style="color:var(--amber)">Poker · Satoshi Nguyen</div>
+          <h2 style="font-size:23px; margin-top:6px">Giải mã MTT</h2>
+          <p class="lead" style="margin-top:8px; font-size:16.5px">GTO (game theory optimal) cho giải đấu poker nhiều bàn (MTT).</p>
+          <div class="status-pill" style="margin-top:12px">Đang viết · chờ xuất bản</div>
         </div>
-      </div>
+      </a>
+
+      <!-- Mental OS — poker -->
+      <a class="bookcard" href={MENTAL}>
+        <div class="cover" aria-hidden="true" style="background:linear-gradient(160deg,#14213f,#0c1734)">
+          <div class="cv-top">
+            <div class="cv-eyebrow" style="color:var(--amber)">Poker</div>
+            <div class="cv-title" style="font-size:11.5px">Sách Thật · Body Thật · Node Thật</div>
+            <div class="cv-sub">Mental OS for Poker</div>
+          </div>
+          <div style="position:absolute; left:0; right:0; bottom:26px; text-align:center; color:var(--dim); font-size:13px; letter-spacing:6px; opacity:.8">♠ ♥ ♦ ♣</div>
+          <div class="cv-author">Satoshi Nguyen</div>
+        </div>
+        <div>
+          <div class="eyebrow" style="color:var(--amber)">Poker · Satoshi Nguyen</div>
+          <h2 style="font-size:23px; margin-top:6px">Sách Thật · Body Thật · Node Thật</h2>
+          <p class="lead" style="margin-top:8px; font-size:16.5px">Mental OS for Poker — khía cạnh tâm lý &amp; mental game.</p>
+          <div class="status-pill" style="margin-top:12px">Đang viết · chờ xuất bản</div>
+        </div>
+      </a>
     </div>
   </section>
 </Base>

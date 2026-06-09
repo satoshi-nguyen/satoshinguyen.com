@@ -9,3 +9,5 @@ node_modules/
 .env.production
 *.log
 .DS_Store
+# author delivery archives (zip drops — never commit)
+archives/

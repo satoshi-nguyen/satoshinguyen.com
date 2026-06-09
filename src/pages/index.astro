@@ -1,10 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
+const SHELF = '/books/';
 const BOOK = '/books/python-for-ai-engineering-volume-1/';
 ---
 <Base
-  title="Nguyễn Phương Ngọc — kỹ sư phần mềm · Applied AI"
-  description="Nguyễn Phương Ngọc — kỹ sư phần mềm, đang học Thạc sĩ Applied AI, quan tâm AI observability. Tác giả “Python cho AI Engineering” — cây cầu thực hành đưa sinh viên kỹ thuật Việt Nam từ Python đến ứng dụng LLM, RAG và Agent."
+  title="Nguyễn Phương Ngọc — kỹ sư phần mềm · AI · poker"
+  description="Nguyễn Phương Ngọc — kỹ sư phần mềm, đang học Thạc sĩ Applied AI. Ba mảng: AI engineering & nghiên cứu, poker & lý thuyết trò chơi, và xây dựng sản phẩm."
 >
   <header class="hero">
     <div class="hero-bridge" aria-hidden="true">
@@ -40,9 +41,8 @@ const BOOK = '/books/python-for-ai-engineering-volume-1/';
     <div class="wrap hero-content">
       <div class="kicker reveal" style="animation-delay:.05s" data-i18n="hero.kicker">Kỹ sư phần mềm · đang học Thạc sĩ Applied AI</div>
       <h1 class="reveal" style="animation-delay:.13s"><span class="name-grad">Nguyễn Phương Ngọc</span></h1>
-      <div class="role reveal" style="animation-delay:.2s" data-i18n="hero.role">Xây hệ thống AI thực tế · quan tâm tới việc quan sát chúng (AI observability)</div>
-      <p class="bio reveal" style="animation-delay:.28s">Tôi xây ứng dụng AI và quan tâm tới việc <em>quan sát</em> chúng — vì sao mô hình trả lời thế này, hỏng ở đâu, tốn bao nhiêu. Trang này là nơi tôi ghi lại việc đang làm, hướng nghiên cứu, và cuốn sách tôi đang viết để giúp sinh viên kỹ thuật Việt Nam tự xây ứng dụng AI hiện đại.</p>
-      <p class="draftline reveal" style="animation-delay:.34s">Trước đây phát triển sản phẩm tại Cốc Cốc · học Kỹ thuật Máy tính tại NTU Singapore.</p>
+      <div class="role reveal" style="animation-delay:.2s" data-i18n="hero.role">Kỹ thuật & nghiên cứu AI · poker và lý thuyết trò chơi · xây dựng sản phẩm</div>
+      <p class="bio reveal" style="animation-delay:.28s">Tôi xây ứng dụng AI và quan tâm tới việc <em>quan sát</em> chúng — vì sao mô hình trả lời thế, hỏng ở đâu, tốn bao nhiêu. Ngoài kỹ thuật, tôi viết về poker &amp; lý thuyết trò chơi, và xây vài sản phẩm. Trang này gom ba mảng đó về một chỗ.</p>
       <div class="links reveal" style="animation-delay:.42s">
         <a href="#" data-link="github">GitHub</a><span class="dot">·</span>
         <a href="#" data-link="scholar">Google Scholar</a><span class="dot">·</span>
@@ -52,22 +52,33 @@ const BOOK = '/books/python-for-ai-engineering-volume-1/';
   </header>
 
   <section class="block wrap">
-    <div class="two">
-      <div>
-        <div class="eyebrow">Việc đang làm</div>
-        <h2 style="margin-top:12px">Cây cầu giữa nền tảng và ứng dụng</h2>
-        <p class="lead">Sinh viên kỹ thuật ở Việt Nam thường vững nền tảng nhưng thiếu một lối đi liền mạch tới ứng dụng AI hiện đại. Tôi viết cuốn sách này như một <em>cây cầu thực hành</em>: từ Python tới LLM, RAG và Agent — bằng mã nguồn chạy được, dự án bối cảnh Việt Nam, và một kỷ luật xuyên suốt là <b style="color:var(--cyan);font-weight:600">xây → đánh giá → quan sát</b>.</p>
-      </div>
-      <div>
-        <div class="eyebrow">Quan tâm nghiên cứu</div>
-        <h2 style="margin-top:12px">AI observability</h2>
-        <p class="lead">Khi hệ thống dựa trên mô hình ngôn ngữ đi vào thực tế, câu hỏi khó không còn là “chạy được không” mà là “vì sao nó trả lời thế, hỏng ở đâu, chi phí bao nhiêu, có bám tài liệu không”. Đây là hướng tôi đang theo đuổi và muốn đưa vào tay người mới học sớm nhất có thể.</p>
-      </div>
+    <div class="eyebrow">Ba mảng</div>
+    <h2 style="margin:12px 0 4px">Một người, ba hướng làm việc</h2>
+    <p class="lead">Khác nhau bề ngoài, nhưng chung một mạch: ra quyết định dưới bất định và đo lại bằng dữ liệu.</p>
+    <div class="res-grid">
+      <a class="res" href={SHELF}>
+        <div class="ricon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h11a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h0v14"/></svg></div>
+        <h4>AI Engineering &amp; nghiên cứu</h4>
+        <p>Ứng dụng LLM · RAG · Agent, AI observability, và cuốn sách thực hành cho sinh viên kỹ thuật Việt.</p>
+        <span class="metric" style="margin-top:4px">Xem Sách →</span>
+      </a>
+      <a class="res" href="/poker/">
+        <div class="ricon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M12 8l2.2 4-2.2 4-2.2-4z"/></svg></div>
+        <h4>Poker</h4>
+        <p>Ghi chép về poker, lý thuyết trò chơi và trải nghiệm giải đấu — dưới tên <em>Satoshi Nguyen</em>.</p>
+        <span class="metric" style="margin-top:4px">Vào trụ Poker →</span>
+      </a>
+      <a class="res" href="/projects/">
+        <div class="ricon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l9-4 9 4-9 4z"/><path d="M3 7v10l9 4 9-4V7"/></svg></div>
+        <h4>Projects &amp; ventures</h4>
+        <p>Các sản phẩm đang xây — Mầm Trí, AceFlow GTO, HyperEdge.fi.</p>
+        <span class="metric" style="margin-top:4px">Xem Projects →</span>
+      </a>
     </div>
   </section>
 
   <section class="block wrap">
-    <div class="eyebrow">Cuốn sách</div>
+    <div class="eyebrow">Nổi bật · đang viết</div>
     <h2 style="margin:12px 0 22px">Python cho AI Engineering</h2>
     <a class="bookcard" href={BOOK}>
       <div class="cover" aria-hidden="true">
@@ -81,7 +92,7 @@ const BOOK = '/books/python-for-ai-engineering-volume-1/';
       </div>
       <div>
         <h2 style="font-size:23px">Từ lập trình cơ bản đến ứng dụng LLM, RAG và Agent</h2>
-        <p class="lead" style="margin-top:10px; font-size:16.5px">Dành cho sinh viên kỹ thuật năm 2–4 đã biết lập trình cơ bản. Năm dự án bối cảnh Việt Nam, mã nguồn có phiên bản, vừa với gói API miễn phí.</p>
+        <p class="lead" style="margin-top:10px; font-size:16.5px">Cây cầu thực hành cho sinh viên kỹ thuật năm 2–4 đã biết lập trình cơ bản. Năm dự án bối cảnh Việt Nam, mã nguồn có phiên bản, vừa với gói API miễn phí.</p>
         <div class="links" style="margin-top:16px"><span style="color:var(--cyan); border-bottom:1px solid var(--cyan); padding-bottom:2px; font-weight:500; font-size:14.5px">Xem chi tiết Cuốn 1 →</span></div>
       </div>
     </a>

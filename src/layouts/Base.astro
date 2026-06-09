@@ -12,7 +12,11 @@ const {
 
 const path = Astro.url.pathname;
 const isHome = path === '/';
-const isBook = path.startsWith('/books');
+const isBooks = path.startsWith('/books');
+const isPoker = path.startsWith('/poker');
+const isProjects = path.startsWith('/projects');
+const isBlog = path.startsWith('/blog');
+const SHELF = '/books/';
 const BOOK = '/books/python-for-ai-engineering-volume-1/';
 ---
 <!DOCTYPE html>
@@ -35,7 +39,10 @@ const BOOK = '/books/python-for-ai-engineering-volume-1/';
       <a class="brand" href="/">Nguyễn Phương <b>Ngọc</b></a>
       <div class="nav-links">
         <a href="/" class={isHome ? 'active' : ''} data-i18n="nav.home">Trang chủ</a>
-        <a href={BOOK} class={isBook ? 'active' : ''} data-i18n="nav.book">Cuốn 1</a>
+        <a href={SHELF} class={isBooks ? 'active' : ''} data-i18n="nav.books">Sách</a>
+        <a href="/poker/" class={isPoker ? 'active' : ''} data-i18n="nav.poker">Poker</a>
+        <a href="/projects/" class={isProjects ? 'active' : ''} data-i18n="nav.projects">Projects</a>
+        <a href="/blog/" class={isBlog ? 'active' : ''} data-i18n="nav.blog">Viết</a>
       </div>
       <div class="nav-right">
         <div class="lang" id="lang">
@@ -56,13 +63,15 @@ const BOOK = '/books/python-for-ai-engineering-volume-1/';
       <div class="foot">
         <div class="fl">© 2026 <b>Nguyễn Phương Ngọc</b> · satoshinguyen.com</div>
         <div class="fr">
+          <a href={SHELF}>Sách</a>
+          <a href="/poker/">Poker</a>
+          <a href="/projects/">Projects</a>
           <a href="#" data-link="github">GitHub</a>
-          <a href="#" data-link="scholar">Google Scholar</a>
+          <a href="#" data-link="scholar">Scholar</a>
           <a href="#" data-link="linkedin">LinkedIn</a>
-          <a href={BOOK}>Cuốn 1</a>
         </div>
       </div>
-      <p class="note">Bản dựng đầu (v0.1). Một số đường liên kết đang chờ tác giả cấp URL thật; phần tiểu sử chờ tác giả chốt mức công bố.</p>
+      <p class="note">Bản dựng (v0.1). Nội dung Poker/Projects/Viết và một số liên kết (GitHub · Scholar · LinkedIn) đang chờ tác giả cấp; phần tiểu sử chờ tác giả chốt mức công bố.</p>
     </div>
   </footer>
 
@@ -70,14 +79,17 @@ const BOOK = '/books/python-for-ai-engineering-volume-1/';
     // VI/EN chrome toggle (demo — full EN content is later work). Non-persistent by design.
     const I18N: Record<string, { vi: string; en: string }> = {
       'nav.home': { vi: 'Trang chủ', en: 'Home' },
-      'nav.book': { vi: 'Cuốn 1', en: 'Book' },
+      'nav.books': { vi: 'Sách', en: 'Books' },
+      'nav.poker': { vi: 'Poker', en: 'Poker' },
+      'nav.projects': { vi: 'Projects', en: 'Projects' },
+      'nav.blog': { vi: 'Viết', en: 'Writing' },
       'hero.kicker': {
         vi: 'Kỹ sư phần mềm · đang học Thạc sĩ Applied AI',
         en: 'Software engineer · MSc Applied AI (in progress)',
       },
       'hero.role': {
-        vi: 'Xây hệ thống AI thực tế · quan tâm tới việc quan sát chúng (AI observability)',
-        en: 'Building real AI systems · focused on observing them (AI observability)',
+        vi: 'Kỹ thuật & nghiên cứu AI · poker và lý thuyết trò chơi · xây dựng sản phẩm',
+        en: 'AI engineering & research · poker and game theory · building products',
       },
     };
     function applyLang(lang: 'vi' | 'en') {

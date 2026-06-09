@@ -1,0 +1,51 @@
+---
+import Base from '../../layouts/Base.astro';
+const BOOK = '/books/python-for-ai-engineering-volume-1/';
+---
+<Base
+  title="Sách — Nguyễn Phương Ngọc"
+  description="Kệ sách của Nguyễn Phương Ngọc: sách về AI engineering và sách poker."
+>
+  <section class="block wrap" style="border-top:none; padding-top:72px">
+    <div class="eyebrow">Kệ sách</div>
+    <h1 style="font-size:clamp(34px,5vw,52px); margin:12px 0 4px">Sách</h1>
+    <p class="lead">Sách thực hành về AI engineering, và sách poker (dưới tên Satoshi Nguyen).</p>
+
+    <div style="display:flex; flex-direction:column; gap:18px; margin-top:30px">
+      <a class="bookcard" href={BOOK}>
+        <div class="cover" aria-hidden="true">
+          <div class="cv-top">
+            <div class="cv-eyebrow">Cuốn 1 · AI</div>
+            <div class="cv-title">Python cho AI Engineering</div>
+            <div class="cv-sub">LLM · RAG · Agent</div>
+          </div>
+          <svg class="cv-bridge" viewBox="0 0 200 60" preserveAspectRatio="none"><line x1="0" y1="46" x2="200" y2="46" stroke="#9FC6E8" stroke-opacity=".5"/><line x1="70" y1="46" x2="70" y2="14" stroke="#EAF7FC" stroke-opacity=".7"/><g stroke="#5ED3F0" stroke-opacity=".7" stroke-width=".8"><line x1="70" y1="15" x2="22" y2="46"/><line x1="70" y1="15" x2="46" y2="46"/><line x1="70" y1="15" x2="104" y2="46"/><line x1="70" y1="15" x2="140" y2="46"/></g></svg>
+          <div class="cv-author">Nguyễn Phương Ngọc</div>
+        </div>
+        <div>
+          <div class="eyebrow" style="color:var(--cyan)">AI Engineering</div>
+          <h2 style="font-size:23px; margin-top:6px">Python cho AI Engineering</h2>
+          <p class="lead" style="margin-top:8px; font-size:16.5px">Từ lập trình cơ bản đến ứng dụng LLM, RAG và Agent. Năm dự án bối cảnh Việt Nam, mã nguồn có phiên bản.</p>
+          <div class="links" style="margin-top:14px"><span style="color:var(--cyan); border-bottom:1px solid var(--cyan); padding-bottom:2px; font-weight:500; font-size:14.5px">Xem chi tiết →</span></div>
+        </div>
+      </a>
+
+      <div class="bookcard" style="cursor:default; opacity:.92">
+        <div class="cover" aria-hidden="true" style="background:linear-gradient(160deg,#14213f,#0c1734)">
+          <div class="cv-top">
+            <div class="cv-eyebrow" style="color:var(--amber)">Poker</div>
+            <div class="cv-title" style="color:var(--dim)">Đang cập nhật</div>
+            <div class="cv-sub">Satoshi Nguyen</div>
+          </div>
+          <div class="cv-author" style="color:var(--dim)">Satoshi Nguyen</div>
+        </div>
+        <div>
+          <div class="eyebrow" style="color:var(--amber)">Poker</div>
+          <h2 style="font-size:23px; margin-top:6px; color:var(--dim)">Sách poker</h2>
+          <p class="lead" style="margin-top:8px; font-size:16.5px">Tên sách, trạng thái và đường đọc/mua đang chờ tác giả xác nhận — sẽ cập nhật tại đây.</p>
+          <div class="status-pill" style="margin-top:12px">Chờ tác giả</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
